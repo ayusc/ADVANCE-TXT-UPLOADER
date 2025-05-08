@@ -9,4 +9,5 @@ WORKDIR /app/
 RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 RUN pip install pytube
 ENV COOKIES_FILE_PATH="youtube_cookies.txt"
+EXPOSE 8000
 CMD gunicorn app:app & python3 main.py
